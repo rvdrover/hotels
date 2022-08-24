@@ -21,7 +21,6 @@ class MyApp extends ConsumerWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: AppTheme.themeData,
-      color: const Color.fromARGB(255, 0, 145, 148),
       home: AuthWidget(
         nonSignedInBuilder: (_) => const LoginPage(),
         signedInBuilder: (_) => const ListViewPage(),
