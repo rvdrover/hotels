@@ -29,7 +29,9 @@ class ListViewPage extends ConsumerWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Text(
-              firebaseAuthServices.auth.currentUser!.displayName!,
+              firebaseAuthServices.auth.currentUser!.displayName!.isNotEmpty
+                  ? firebaseAuthServices.auth.currentUser!.displayName!
+                  : "User Name not Available",
               style: const TextStyle(fontSize: 25, fontWeight: FontWeight.w300),
               textAlign: TextAlign.center,
             ),
@@ -37,7 +39,9 @@ class ListViewPage extends ConsumerWidget {
               height: 5,
             ),
             Text(
-              firebaseAuthServices.auth.currentUser!.email!,
+              firebaseAuthServices.auth.currentUser!.email!.isNotEmpty
+                  ? firebaseAuthServices.auth.currentUser!.email!
+                  : "Email Not Available",
               style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w300),
               textAlign: TextAlign.center,
             ),
